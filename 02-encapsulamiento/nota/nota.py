@@ -14,7 +14,7 @@ class Nota:
     @valor.setter
     def valor(self, valor_inicial):
         """Setear el valor"""
-        if valor_inicial < 0 or valor_inicial > 10:
+        if valor_inicial < 1 or valor_inicial > 10:
             raise ValueError("Valor incorrecto")
         self.__valor = valor_inicial
 
@@ -38,13 +38,11 @@ class Nota:
         return self.valor >= 7
 
     def __repr__(self) -> str:
-        ap = "aprobado"
+        ap = "reprobado"
         if self.aprobado():
             ap = "aprobado"
-        elif self.promociona():
-            ap = "promociona"
-        else:
-            ap = "reprobado"
+        if self.promociona():
+            ap = "promocionado"
         return f"La nota es {self.__valor} y está {ap}"
 
 
