@@ -12,7 +12,7 @@ from nota import Nota
 class Estudiante:
     def __init__(self, nombre: str, nota: int) -> None:
         self.__nombre: str = nombre
-        self.__nota: Nota = Nota(nota)
+        self.__obj_nota: Nota = Nota(nota)
 
     @property
     def nombre(self) -> str:
@@ -24,17 +24,26 @@ class Estudiante:
 
     @property
     def nota(self) -> int:
-        return self.__nota.valor
+        return self.__obj_nota.valor
 
     @nota.setter
     def nota(self, nueva_nota: int) -> None:
-        self.__nota.valor = nueva_nota
+        self.__obj_nota.valor = nueva_nota
 
     def recuperar(self, nueva_nota: int) -> None:
-        self.__nota.recuperar(nueva_nota)
+        self.__obj_nota.recuperar(nueva_nota)
+
+    def aprobado(self) -> bool:
+        return self.__obj_nota.aprobado()
+
+    def promociona(self) -> bool:
+        return self.__obj_nota.promociona()
+
+    def desaprobado(self) -> bool:
+        return self.__obj_nota.desaprobado()
 
     def __str__(self) -> str:
-        return f"Alumno: {self.nombre}, {self.__nota}"
+        return f"Alumno: {self.nombre}, {self.__obj_nota}"
 
 
 pepito = Estudiante("pepito", 8)
