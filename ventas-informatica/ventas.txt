@@ -1,4 +1,4 @@
-A1023,Mouse Logitech M90,Periféricos,5200.50,3,Camila
+A1023,Mouse Logitech M90,Periféricos,5200.50,10,Camila
 A1023,Mouse Logitech M90,Periféricos,5200.50,2,Lautaro
 A1001,Teclado Redragon Kumara,Periféricos,14500.00,1,Camila
 A1050,Monitor Samsung 24,Monitores,112000.00,2,Lucas
@@ -25,7 +25,7 @@ A1170,Mouse Razer DeathAdder,Periféricos,18500.00,1,Lucas
 A1180,Hub USB 4 Puertos,Accesorios,4200.00,3,Camila
 A1190,Notebook Asus VivoBook,Computadoras,685000.00,1,Valentina
 A1200,Monitor AOC 22,Monitores,98000.00,1,Lucas
-A1210,Placa madre ASUS Prime,Componentes,89000.00,1,Lautaro
+A1210,Placa madre ASUS Prime,Componentes,89000.00,1,Malena
 A1220,Disco externo Seagate 2TB,Almacenamiento,67000.00,2,Lucas
 A1230,Mouse inalámbrico Genius,Periféricos,5500.00,3,Camila
 A1240,Notebook Lenovo ThinkPad,Computadoras,910000.00,1,Valentina

@@ -1,4 +1,5 @@
 from io import open
+from os import device_encoding, wait
 
 """
 Una empresa almacena información de sus ventas diarias en un archivo de texto llamado ventas.txt.
@@ -64,6 +65,56 @@ class GestionVentas:
 
         return max_venta, max_vendedor
 
+    def ventas_por_vendedor(self) -> dict[str, float]:
+        vv: dict[str, float] = {}
+
+        for cada_venta in self.ventas:
+            vendedor = cada_venta.vendedor
+            monto = cada_venta.monto_venta()
+            # if cada_venta.vendedor not in vv.keys():
+            #     nuevo_valor = cada_venta.monto_venta()
+            # else:
+            #     nuevo_valor = vv[cada_venta.vendedor] + cada_venta.monto_venta()
+            nuevo_valor = vv.setdefault(vendedor, 0)
+            nuevo_valor += monto
+            vv.update({cada_venta.vendedor: nuevo_valor})
+
+        return vv
+
+    def mostrar_ventas_por_vendedor(self):
+        vv = self.ventas_por_vendedor()
+
+        for vendedor, monto in vv.items():
+            print(f"Vendedor: {vendedor}, Ventas Totales: {monto}")
+
+    def cantidades_por_producto(self) -> dict[str, int]:
+        aux: dict[str, int] = {}
+        for cada_venta in self.ventas:
+            if cada_venta.cp not in aux.keys():
+                nuevo_valor = cada_venta.cv
+            else:
+                nuevo_valor = aux[cada_venta.cp] + cada_venta.cv
+            aux.update({cada_venta.cp: nuevo_valor})
+
+        return aux
+
+    def producto_mas_vendido(self):
+        aux = self.cantidades_por_producto()
+
+        max_cv = list(aux.values())[0]
+
+        for cp, cv in aux.items():
+            if cv > max_cv:
+                max_cv = cv
+
+        mas_vendidos = []
+
+        for cp, cv in aux.items():
+            if cv == max_cv:
+                mas_vendidos.append((cp, cv))
+
+        return mas_vendidos
+
 
 def main():
     gvi = GestionVentas()
@@ -71,6 +122,10 @@ def main():
     gvi.mostrar_ventas()
     print("Total de ventas", gvi.total_ventas())
     print("Vendedor estrella: ", gvi.vendedor_estrella())
+    # print("Ventas por vendedor", gvi.ventas_por_vendedor())
+    gvi.mostrar_ventas_por_vendedor()
+    print(gvi.cantidades_por_producto())
+    print(gvi.producto_mas_vendido())
 
 
 if __name__ == "__main__":
