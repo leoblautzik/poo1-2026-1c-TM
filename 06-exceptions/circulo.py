@@ -1,13 +1,23 @@
 import math
 
 
+class RadioInvalidoException(Exception):
+    pass
+
+
 class Circulo:
     def __init__(self, radio: float):
-        self.__radio = radio
+        self.radio = radio
 
     @property
     def radio(self):
         return self.__radio
+
+    @radio.setter
+    def radio(self, nuevo_radio):
+        if nuevo_radio <= 0:
+            raise RadioInvalidoException("El radio no puede ser <= que cero")
+        self.__radio = nuevo_radio
 
     def area(self):
         return math.pi * pow(self.radio, 2)
@@ -23,12 +33,23 @@ class Circulo:
 
 
 def main():
-    radio = float(input("Ingrese el radio: "))
-    c1 = Circulo(radio)
-    print(c1)
-    print("radio de c1: ", c1.radio)
-    print(c1.area())
-    print(c1.perimetro())
+    while True:
+        try:
+            radio = float(input("Ingrese el radio: "))
+            c1 = Circulo(radio)
+            print(c1)
+            print("radio de c1: ", c1.radio)
+            print(c1.area())
+            print(c1.perimetro())
+            print(c1.diametro())
+            break
+
+        except ValueError:
+            print("El valor ingresado no es convertible a float")
+        except RadioInvalidoException:
+            print("El radio debe ser mayor que cero")
+        finally:
+            print("Pasaba por aqui...")
 
 
 if __name__ == "__main__":
