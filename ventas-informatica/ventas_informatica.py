@@ -65,24 +65,33 @@ class GestionVentas:
 
         return max_venta, max_vendedor
 
-    def ventas_por_vendedor(self) -> dict[str, float]:
-        vv: dict[str, float] = {}
+    def ventas_por_vendedor_basica(self) -> dict[str, float]:
+        ventas_vendedor: dict[str, float] = {}
 
         for cada_venta in self.ventas:
-            vendedor = cada_venta.vendedor
-            monto = cada_venta.monto_venta()
-            # if cada_venta.vendedor not in vv.keys():
-            #     nuevo_valor = cada_venta.monto_venta()
-            # else:
-            #     nuevo_valor = vv[cada_venta.vendedor] + cada_venta.monto_venta()
-            nuevo_valor = vv.setdefault(vendedor, 0)
-            nuevo_valor += monto
-            vv.update({cada_venta.vendedor: nuevo_valor})
+            if cada_venta.vendedor not in ventas_vendedor.keys():
+                nuevo_valor = cada_venta.monto_venta()
+            else:
+                nuevo_valor = (
+                    ventas_vendedor[cada_venta.vendedor] + cada_venta.monto_venta()
+                )
+            ventas_vendedor[cada_venta.vendedor] = nuevo_valor
 
-        return vv
+        return ventas_vendedor
+
+    def ventas_por_vendedor_con_get(self) -> dict[str, float]:
+        ventas_vendedor: dict[str, float] = {}
+
+        for venta in self.ventas:
+            ventas_vendedor[venta.vendedor] = (
+                ventas_vendedor.get(venta.vendedor, 0) + venta.monto_venta()
+            )
+
+        return ventas_vendedor
 
     def mostrar_ventas_por_vendedor(self):
-        vv = self.ventas_por_vendedor()
+        # vv = self.ventas_por_vendedor_basica()
+        vv = self.ventas_por_vendedor_con_get()
 
         for vendedor, monto in vv.items():
             print(f"Vendedor: {vendedor}, Ventas Totales: {monto}")
