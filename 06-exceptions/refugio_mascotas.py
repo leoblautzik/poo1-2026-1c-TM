@@ -11,6 +11,10 @@ marcar_adoptado(): cambia el estado a adoptado.
 __str__(): devuelve una representación legible del animal.
 """
 
+"""
+
+"""
+
 
 class BooleanError(Exception):
     pass
@@ -56,13 +60,13 @@ class Refugio:
                         elif adoptado.lower() in ("false", "no"):
                             adoptado = False
                         else:
-                            raise BooleanError()
+                            raise BooleanError(f"Valor booleano inválido: {adoptado}")
                         mascota = Mascota(id, nombre, especie, edad, adoptado)
                         self.__mascotas.append(mascota)
                     except ValueError:
                         print("Valor entero corrupto")
-                    except BooleanError:
-                        print("algo salio mal con los boolean")
+                    except BooleanError as e:
+                        print(e)
 
                 file.close()
 
