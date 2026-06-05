@@ -1,0 +1,45 @@
+Argentina,2,Brasil,1
+Argentina,3,Alemania,0
+Argentina,1,Francia,1
+Argentina,2,España,0
+Argentina,4,Italia,2
+Argentina,1,Portugal,0
+Argentina,2,Inglaterra,2
+Argentina,3,Uruguay,1
+Argentina,2,Paises Bajos,1
+Brasil,2,Alemania,2
+Brasil,1,Francia,3
+Brasil,2,España,1
+Brasil,3,Italia,1
+Brasil,1,Portugal,1
+Brasil,2,Inglaterra,0
+Brasil,1,Uruguay,0
+Brasil,2,Paises Bajos,2
+Alemania,1,Francia,0
+Alemania,2,España,2
+Alemania,1,Italia,1
+Alemania,3,Portugal,1
+Alemania,2,Inglaterra,1
+Alemania,0,Uruguay,0
+Alemania,1,Paises Bajos,2
+Francia,2,España,0
+Francia,1,Italia,1
+Francia,2,Portugal,1
+Francia,3,Inglaterra,2
+Francia,1,Uruguay,0
+Francia,2,Paises Bajos,1
+España,1,Italia,0
+España,2,Portugal,2
+España,0,Inglaterra,1
+España,2,Uruguay,1
+España,1,Paises Bajos,1
+Italia,1,Portugal,0
+Italia,2,Inglaterra,2
+Italia,1,Uruguay,1
+Italia,0,Paises Bajos,1
+Portugal,1,Inglaterra,3
+Portugal,2,Uruguay,0
+Portugal,1,Paises Bajos,1
+Inglaterra,2,Uruguay,1
+Inglaterra,2,Paises Bajos,0
+Uruguay,1,Paises Bajos,1
