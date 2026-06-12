@@ -1,0 +1,49 @@
+Cantidad de usuarios registrados: 20
+Usuarios registrados
+bruno
+maria
+agustina
+ezequiel
+diego
+carla
+nicolas
+florencia
+sofia
+martin
+camila
+lucas
+juan
+franco
+valentina
+julieta
+ana
+tomas
+paula
+pedro
+
+Series que vio cada usuario
+ana {'Stranger Things', 'The Office', 'Breaking Bad', 'Dark', 'The Boys'}
+juan {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+pedro {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+lucas {'Stranger Things', 'The Office', 'Breaking Bad', 'Dark', 'The Boys'}
+maria {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+sofia {'The Office', 'Dark', 'The Boys', 'Stranger Things'}
+diego {'Stranger Things', 'The Office', 'Breaking Bad', 'Dark', 'The Boys'}
+carla {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+martin {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+valentina {'The Office', 'Breaking Bad', 'Dark', 'The Boys'}
+nicolas {'Stranger Things', 'The Office', 'Breaking Bad', 'Dark', 'The Boys'}
+julieta {'Stranger Things', 'The Office', 'Breaking Bad', 'Dark', 'The Boys'}
+franco {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+camila {'The Office', 'Breaking Bad', 'Dark', 'Stranger Things'}
+tomas {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+agustina {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+ezequiel {'Stranger Things', 'The Office', 'Breaking Bad', 'Dark', 'The Boys'}
+florencia {'Stranger Things', 'The Office', 'Breaking Bad', 'Dark', 'The Boys'}
+bruno {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+paula {'Stranger Things', 'Breaking Bad', 'The Office', 'Dark', 'The Boys'}
+
+Usuarios mas activos: 
+(['diego'], 295)
+Ranking de series: 
+[('Dark', 29), ('The Office', 24), ('The Boys', 23)]
